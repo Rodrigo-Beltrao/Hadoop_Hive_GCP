@@ -1,0 +1,11 @@
+***********************************************************Scripts de ingestão de dados no Hive**************************************************************************
+
+Ingestão de dados no Hive:
+
+
+
+LOAD DATA INPATH '/user/rodrigoo_ramos/datasets/sd254_users.csv' overwrite into table sd254_users;
+
+LOAD DATA INPATH '/user/rodrigoo_ramos/datasets/sd254_cards.csv' overwrite into table sd254_cards;
+
+LOAD DATA INPATH '/user/rodrigoo_ramos/datasets/User0_credit_card_transactions.csv' overwrite into table user0_credit_card_transactions;

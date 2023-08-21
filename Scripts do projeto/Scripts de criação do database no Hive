@@ -1,0 +1,91 @@
+***********************************************************Scripts de criação do database no Hive************************************************************************
+
+Criação do database no hive:
+
+
+
+create database database3;
+
+**************************************************************************************************************************************************************************
+
+Criação de tabelas no database:
+
+
+
+show databases;
+
+
+
+use database3;
+
+
+
+CREATE TABLE IF NOT EXISTS sd254_users (
+
+Person STRING,
+    Current_Age INT,
+    Retirement_Age INT,
+    Birth_Year INT,
+    Gender STRING,
+    Address STRING,
+    Apartment STRING,
+    City STRING,
+    State STRING,
+    Zipcode STRING,
+    Latitude DOUBLE,
+    Longitude DOUBLE,
+    Per_Capita_Income DOUBLE,
+    Yearly_Income DOUBLE,
+    Total_Debt DOUBLE,
+    FICO_Score INT,
+    Num_Credit_Cards INT
+)
+
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+
+CREATE TABLE IF NOT EXISTS User0_credit_card_transactions (
+
+chave STRING,
+    Card STRING,
+    Year INT,
+    Month STRING,
+    Day INT,
+    Tempo STRING,
+    Amount DOUBLE,
+    Use_Chip STRING,
+    Merchant_Name STRING,
+    Merchant_State STRING,
+    Zip STRING,
+    MCC STRING,
+    Errors STRING,
+    Is_Fraud STRING
+)
+
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+
+CREATE TABLE IF NOT EXISTS sd254_cards (
+
+chave2 STRING,
+    Card_Index INT,
+    Card_Brand STRING,
+    Card_Type STRING,
+    Card_Number STRING,
+    Expires STRING,
+    CVV STRING,
+    Has_Chip STRING,
+    Cards_Issued INT,
+    Credit_Limit DOUBLE,
+    Acct_Open_Date STRING,
+    Year_PIN_Last_Changed INT,
+    Card_on_Dark_Web STRING
+)
+
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;

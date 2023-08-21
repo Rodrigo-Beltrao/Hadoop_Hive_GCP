@@ -1,0 +1,97 @@
+***********************************************************Scripts com as consultas SQL que foram utilizadas nas análises************************************************
+
+Consulta para saber o número médio de transações por dia da semana:
+
+
+
+SELECT day, COUNT(*) AS Num_Transactions
+FROM user0_credit_card_transactions
+GROUP BY day;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber o total de usuários por estado:
+
+
+
+SELECT state, COUNT(*) AS Total_Users
+FROM sd254_users
+GROUP BY state;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber a média de idade dos usuários por estado:
+
+
+
+SELECT state, AVG(current_age) AS Avg_Age
+FROM sd254_users
+GROUP BY state;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber o número médio de cartões emitidos por marca de cartão:
+
+
+
+SELECT card_brand, AVG(cards_issued) AS Avg_Cards_Issued
+FROM sd254_cards
+GROUP BY card_brand;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber o total de transações por ano e por mês:
+
+
+
+SELECT year, month, COUNT(*) AS Total_Transactions
+FROM user0_credit_card_transactions
+GROUP BY year, month;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber o número médio de cartões emitidos por tipo de cartão:
+
+
+
+SELECT card_type, AVG(cards_issued) AS Avg_Cards_Issued
+FROM sd254_cards
+GROUP BY card_type;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber o número de transações por estado do comerciante:
+
+
+
+SELECT merchant_state, COUNT(*) AS Num_Transactions
+FROM user0_credit_card_transactions
+GROUP BY merchant_state;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber o número médio de cartões de crédito por faixa etária:
+
+
+
+SELECT Age_Group, AVG(num_credit_cards) AS Avg_Num_Cards
+FROM (SELECT CASE
+                WHEN current_age BETWEEN 18 AND 30 THEN '18-30'
+                WHEN current_age BETWEEN 31 AND 45 THEN '31-45'
+                WHEN current_age BETWEEN 46 AND 60 THEN '46-60'
+                ELSE '60+'
+            END AS Age_Group,
+            num_credit_cards
+      FROM sd254_users) AS Age_Cards
+GROUP BY Age_Group;
+
+**************************************************************************************************************************************************************************
+
+Consulta para saber o total de transações por estado e por mês:
+
+
+
+SELECT merchant_state, month, COUNT(*) AS Num_Transactions
+FROM user0_credit_card_transactions
+GROUP BY merchant_state, month;
+
