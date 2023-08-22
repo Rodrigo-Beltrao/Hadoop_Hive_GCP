@@ -12,7 +12,8 @@ Criação de um database no Hive e análise de dados a partir da criação de um
 - Criação de um database no Hive;
 - Criação de tabelas via jdbc no Hive;
 - Ingestão de dados no Hive;
-- Consultas em SQL via jdbc no Hive.
+- Consultas em SQL via jdbc no Hive;
+- Análise de Dados.
 
 ## Criação de um cluster Hadoop via Dataproc no GCP
 Ambiente GCP 
@@ -41,3 +42,10 @@ A ingestão foi feita nas tabelas via jdbc
 ## Consultas em SQL via jdbc no Hive
 Demonstração de uma dentre várias consultas feitas em SQL
 ![Select](https://i.imgur.com/M2vURnI.png)
+
+## Análise de Dados
+
+-
+-
+-
+-
