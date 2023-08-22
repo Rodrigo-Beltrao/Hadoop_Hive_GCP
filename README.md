@@ -45,7 +45,23 @@ Demonstração de uma dentre várias consultas feitas em SQL
 
 ## Análise de Dados
 
+Os dados usados neste projeto são referentes a transações de cartões de crédito de cidadões estadunienses. Nesses CSV é possível encontrar informações sobre taxas de fraude, valores de compra, códigos de categoria de comerciante (MCCs) e outras métricas (o dicionários de dados está disponível no topo da página).
+
+A análise de dados teve por objetivo responder as seguintes perguntas:
+- Qual é o número médio de transações por dia da semana?
+- Qual é o total de usuários por estado?
+- Qual é a média de idade dos usuários por estado?
+- Qual é o número médio de cartões emitidos por marca de cartão?
+- Qual é o total de transações por ano e por mês?
+- Qual é o número médio de cartões emitidos por tipo de cartão?
+- Qual é o número de transações por estado do comerciante?
+- Qual é o número médio de cartões de crédito por faixa etária?
+- Qual é o total de transações por estado e por mês?
+
+A obtenção das respostas foi possível graças as consultas realizadas em SQL (os scripts estão no topo da página). Os resultados foram:
 -
 -
 -
--
+
+Fonte dos dados:
+Kaggle - https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions?select=sd254_users.csv
