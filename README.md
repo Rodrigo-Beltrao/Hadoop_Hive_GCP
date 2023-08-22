@@ -64,7 +64,7 @@ A obtenção das respostas foi possível graças as consultas realizadas em SQL 
 -
 -
 
-Proposta de evolução do trabalho: Utilizar técnicas avançadas de aprendizado de máquina para desenvolver um modelo de detecção de fraude utilizando os dados disponíveis. O modelo poderá ser feito utilizando a linguagem de programação java com o Apache Mahout ou a partir da linguagem de programação python com bibliotecas de machine learning.
+Proposta de evolução do trabalho: Utilizar técnicas avançadas de aprendizado de máquina para desenvolver um modelo de detecção de fraude utilizando os dados disponíveis. O modelo poderá ser feito utilizando a linguagem de programação java com o Apache Mahout ou a partir da linguagem de programação python com bibliotecas de machine learning no jupyter notebook.
 
 Fonte dos dados:
 Kaggle - https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions?select=sd254_users.csv
