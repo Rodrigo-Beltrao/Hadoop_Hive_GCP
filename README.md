@@ -58,7 +58,7 @@ A análise de dados teve por objetivo responder as seguintes perguntas:
 - Qual é o número médio de cartões de crédito por faixa etária?
 - Qual é o total de transações por estado e por mês?
 
-A obtenção das respostas foi possível graças as consultas realizadas em SQL (os scripts estão no topo da página). Os resultados foram:
+A obtenção das respostas foi possível graças as consultas realizadas em SQL (os scripts com os resultados das consultas estão no topo da página). Os resultados foram:
 
 -
 -
