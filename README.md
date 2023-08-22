@@ -60,7 +60,7 @@ A análise de dados teve por objetivo responder as seguintes perguntas:
 
 A obtenção das respostas foi possível graças as consultas realizadas em SQL (os scripts com os resultados das consultas estão em uma pasta no topo da página). Os resultados foram:
 
--
+- PS: Os resultados serão postados em breve!
 -
 -
 
