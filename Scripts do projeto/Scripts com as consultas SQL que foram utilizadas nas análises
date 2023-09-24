@@ -10,23 +10,23 @@ GROUP BY day;
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber o total de usuários por estado:
+Consulta para saber o total de usuários por cidade:
 
 
 
-SELECT state, COUNT(*) AS Total_Users
+SELECT city, COUNT(*) AS Total_Users
 FROM sd254_users
-GROUP BY state;
+GROUP BY city;
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber a média de idade dos usuários por estado:
+Consulta para saber a média de idade dos usuários por cidade:
 
 
 
-SELECT state, AVG(current_age) AS Avg_Age
+SELECT city, AVG(current_age) AS Avg_Age
 FROM sd254_users
-GROUP BY state;
+GROUP BY city;
 
 **************************************************************************************************************************************************************************
 
@@ -60,13 +60,13 @@ GROUP BY card_type;
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber o número de transações por estado do comerciante:
+Consulta para saber o número de transações por cidade do comerciante:
 
 
 
-SELECT merchant_state, COUNT(*) AS Num_Transactions
+SELECT merchant_city, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state;
+GROUP BY merchant_city;
 
 **************************************************************************************************************************************************************************
 
@@ -87,11 +87,11 @@ GROUP BY Age_Group;
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber o total de transações por estado e por mês:
+Consulta para saber o total de transações por cidade e por mês:
 
 
 
-SELECT merchant_state, month, COUNT(*) AS Num_Transactions
+SELECT merchant_city, month, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state, month;
+GROUP BY merchant_city, month;
 
