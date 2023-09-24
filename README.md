@@ -49,14 +49,14 @@ Os dados usados neste projeto são referentes a transações de cartões de cré
 
 A análise de dados teve por objetivo responder as seguintes perguntas:
 - Qual é o número médio de transações por dia da semana?
-- Qual é o total de usuários por estado?
-- Qual é a média de idade dos usuários por estado?
+- Qual é o total de usuários por cidade?
+- Qual é a média de idade dos usuários por cidade?
 - Qual é o número médio de cartões emitidos por marca de cartão?
 - Qual é o total de transações por ano e por mês?
 - Qual é o número médio de cartões emitidos por tipo de cartão?
-- Qual é o número de transações por estado do comerciante?
+- Qual é o número de transações por cidade do comerciante?
 - Qual é o número médio de cartões de crédito por faixa etária?
-- Qual é o total de transações por estado e por mês?
+- Qual é o total de transações por cidade e por mês?
 
 A obtenção das respostas foi possível graças as consultas realizadas em SQL (os scripts com os resultados das consultas estão em uma pasta no topo da página). A partir dos resultados, foi possível tirar os seguintes insights:
 
@@ -66,13 +66,13 @@ A obtenção das respostas foi possível graças as consultas realizadas em SQL 
 
   Picos e Vales de Transações: Os dias 15, 2 e 1 apresentam os picos mais altos de transações, enquanto o dia 31 registra o        menor número de transações. Esses padrões podem ser influenciados por datas de pagamento, compras recorrentes ou outros          fatores sazonais.
 
-- Insights extraídos do total de usuários por estado:
+- Insights extraídos do total de usuários por cidade:
 
   Centros Financeiros: Cidades com maior número de usuários, como Houston com 22 usuários, podem ser centros financeiros onde a    emissão de cartões de crédito é mais comum devido à presença de instituições financeiras.
 
   Necessidades de Marketing: Os dados podem ser usados para personalizar estratégias de marketing e ofertas de produtos com base   nas características de uso de cartão de crédito em diferentes cidades.
 
-- Insights extraídos da média de idade dos usuários por estado:
+- Insights extraídos da média de idade dos usuários por cidade:
 
   Venda de Serviços bancários: Com esses dados é possível direcionar serviços de planejamento de aposentadoria, consultoria de     investimentos e opções de aposentadoria para cidades ondem há um usuários mais velhos e para o público mais jovens seria         interessante direcionar programas de empréstimos para estudantes com taxas competitivas e opções flexíveis de pagamento, além    de serviços bancários digitais, como aplicativos móveis, carteiras digitais e plataformas de pagamento online.
 
@@ -114,7 +114,7 @@ A obtenção das respostas foi possível graças as consultas realizadas em SQL 
 
   Segmentação de Mercado: Dependendo da estratégia da instituição financeira, pode haver oportunidades de segmentação de mercado   com base nos diferentes tipos de cartão, considerando as preferências dos clientes.
 
-- Insights extraídos do número de transações por estado do comerciante:
+- Insights extraídos do número de transações por cidade do comerciante:
 
   Centros Urbanos e Turísticos: Algumas cidades turísticas ou centros urbanos têm uma alta atividade de transações, como "Las      Vegas" com 84 transações e "Los Angeles" com 54 transações.
 
@@ -136,9 +136,9 @@ A obtenção das respostas foi possível graças as consultas realizadas em SQL 
 
   Necessidades Financeiras Diversificadas: Usuários de todas as faixas etárias têm um número semelhante de cartões, o que pode     indicar que suas necessidades financeiras são diversas e podem incluir uma variedade de instituições financeiras, tipos de       cartões e serviços.
 
-- Insights extraídos do total de transações por estado e por mês:
+- Insights extraídos do total de transações por cidade e por mês:
 
-  Comportamento Anômalo: Alguns estados têm um número significativamente alto de transações em comparação com outros, como La      Verne em janeiro e outubro. Pode haver razões específicas para esses picos, como promoções ou eventos locais.
+  Comportamento Anômalo: Algumas cidades têm um número significativamente alto de transações em comparação com outroa, como La      Verne em janeiro e outubro. Pode haver razões específicas para esses picos, como promoções ou eventos locais.
 
   Presença Online: A categoria "ONLINE" também aparece nos dados, indicando transações online. Ela tem um número considerável de   transações, o que pode refletir a crescente preferência por compras online.
 
