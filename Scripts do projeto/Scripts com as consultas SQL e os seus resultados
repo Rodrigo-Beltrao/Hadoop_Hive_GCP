@@ -83,36 +83,36 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber o total de usuários por estado:
+Consulta para saber o total de usuários por cidade:
 
 
-SELECT state, COUNT(*) AS Total_Users
+SELECT city, COUNT(*) AS Total_Users
 FROM sd254_users
-GROUP BY state;
+GROUP BY city;
 
 
 
-0: jdbc:hive2://localhost:10000/default> SELECT state, COUNT(*) AS Total_Users
+0: jdbc:hive2://localhost:10000/default> SELECT city, COUNT(*) AS Total_Users
 . . . . . . . . . . . . . . . . . . . .> FROM sd254_users
-. . . . . . . . . . . . . . . . . . . .> GROUP BY state;
-INFO  : Compiling command(queryId=hive_20230821002404_38c6a15a-d108-46b5-bcc9-e2e298129739): SELECT state, COUNT(*) AS Total_Users
+. . . . . . . . . . . . . . . . . . . .> GROUP BY city;
+INFO  : Compiling command(queryId=hive_20230821002404_38c6a15a-d108-46b5-bcc9-e2e298129739): SELECT city, COUNT(*) AS Total_Users
 FROM sd254_users
-GROUP BY state
+GROUP BY city
 INFO  : Concurrency mode is disabled, not creating a lock manager
 INFO  : Semantic Analysis Completed (retrial = false)
-INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:state, type:string, comment:null), FieldSchema(name:total_users, type:bigint, comment:null)], properties:null)
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:city, type:string, comment:null), FieldSchema(name:total_users, type:bigint, comment:null)], properties:null)
 INFO  : Completed compiling command(queryId=hive_20230821002404_38c6a15a-d108-46b5-bcc9-e2e298129739); Time taken: 0.1 seconds
 INFO  : Concurrency mode is disabled, not creating a lock manager
-INFO  : Executing command(queryId=hive_20230821002404_38c6a15a-d108-46b5-bcc9-e2e298129739): SELECT state, COUNT(*) AS Total_Users
+INFO  : Executing command(queryId=hive_20230821002404_38c6a15a-d108-46b5-bcc9-e2e298129739): SELECT city, COUNT(*) AS Total_Users
 FROM sd254_users
-GROUP BY state
+GROUP BY city
 INFO  : Query ID = hive_20230821002404_38c6a15a-d108-46b5-bcc9-e2e298129739
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
 INFO  : Subscribed to counters: [] for queryId: hive_20230821002404_38c6a15a-d108-46b5-bcc9-e2e298129739
 INFO  : Session is already open
-INFO  : Dag name: SELECT state, COUNT(*) AS Total_User...state (Stage-1)
+INFO  : Dag name: SELECT city, COUNT(*) AS Total_User...city (Stage-1)
 INFO  : Status: Running (Executing on YARN cluster with App id application_1692561457639_0009)
 
 ----------------------------------------------------------------------------------------------
@@ -127,7 +127,7 @@ INFO  : Completed executing command(queryId=hive_20230821002404_38c6a15a-d108-46
 INFO  : OK
 INFO  : Concurrency mode is disabled, not creating a lock manager
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Abbeville                  | 3            |
 | Aberdeen                   | 1            |
@@ -230,7 +230,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Bessemer                   | 1            |
 | Bessemer City              | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Bethesda                   | 1            |
 | Bethlehem                  | 2            |
@@ -333,7 +333,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Central Point              | 1            |
 | Challis                    | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Chambersburg               | 1            |
 | Chana                      | 1            |
@@ -436,7 +436,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Delavan                    | 1            |
 | Delmar                     | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Delphos                    | 1            |
 | Delray Beach               | 1            |
@@ -539,7 +539,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Fort Worth                 | 5            |
 | Foxboro                    | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Franconia                  | 1            |
 | Frankfort                  | 1            |
@@ -642,7 +642,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Highlands                  | 1            |
 | Hillsboro                  | 2            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Hinsdale                   | 2            |
 | Hitchcock                  | 1            |
@@ -745,7 +745,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Lake Forest                | 1            |
 | Lake George                | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Lake Havasu City           | 1            |
 | Lake Hopatcong             | 1            |
@@ -848,7 +848,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Marshfield                 | 1            |
 | Martinsburg                | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Maryland Heights           | 1            |
 | Marysville                 | 1            |
@@ -951,7 +951,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | New Orleans                | 3            |
 | New York                   | 9            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Newark                     | 4            |
 | Newburgh                   | 2            |
@@ -1054,7 +1054,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Peckville                  | 1            |
 | Pennington                 | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Pensacola                  | 3            |
 | Perkins                    | 1            |
@@ -1157,7 +1157,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Rosebush                   | 1            |
 | Rosedale                   | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Rosemead                | 1            |
 | Roseville               | 3            |
@@ -1260,7 +1260,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Stockton                | 6            |
 | Strafford               | 1            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Stratford               | 1            |
 | Strongsville            | 1            |
@@ -1363,7 +1363,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Warwick                 | 1            |
 | Washington              | 3            |
 +----------------------------+--------------+
-|           state            | total_users  |
+|            city            | total_users  |
 +----------------------------+--------------+
 | Washington Court House  | 1            |
 | Waterbury               | 1            |
@@ -1457,36 +1457,36 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber a média de idade dos usuários por estado:
+Consulta para saber a média de idade dos usuários por cidade:
 
 
 
-SELECT state, AVG(current_age) AS Avg_Age
+SELECT city, AVG(current_age) AS Avg_Age
 FROM sd254_users
-GROUP BY state;
+GROUP BY city;
 
 
-0: jdbc:hive2://localhost:10000/default> SELECT state, AVG(current_age) AS Avg_Age
+0: jdbc:hive2://localhost:10000/default> SELECT city, AVG(current_age) AS Avg_Age
 . . . . . . . . . . . . . . . . . . . .> FROM sd254_users
-. . . . . . . . . . . . . . . . . . . .> GROUP BY state;
-INFO  : Compiling command(queryId=hive_20230821002816_06a5b7b2-9827-47a1-85e5-19c581bdc675): SELECT state, AVG(current_age) AS Avg_Age
+. . . . . . . . . . . . . . . . . . . .> GROUP BY city;
+INFO  : Compiling command(queryId=hive_20230821002816_06a5b7b2-9827-47a1-85e5-19c581bdc675): SELECT city, AVG(current_age) AS Avg_Age
 FROM sd254_users
-GROUP BY state
+GROUP BY city
 INFO  : Concurrency mode is disabled, not creating a lock manager
 INFO  : Semantic Analysis Completed (retrial = false)
-INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:state, type:string, comment:null), FieldSchema(name:avg_age, type:double, comment:null)], properties:null)
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:city, type:string, comment:null), FieldSchema(name:avg_age, type:double, comment:null)], properties:null)
 INFO  : Completed compiling command(queryId=hive_20230821002816_06a5b7b2-9827-47a1-85e5-19c581bdc675); Time taken: 0.107 seconds
 INFO  : Concurrency mode is disabled, not creating a lock manager
-INFO  : Executing command(queryId=hive_20230821002816_06a5b7b2-9827-47a1-85e5-19c581bdc675): SELECT state, AVG(current_age) AS Avg_Age
+INFO  : Executing command(queryId=hive_20230821002816_06a5b7b2-9827-47a1-85e5-19c581bdc675): SELECT city, AVG(current_age) AS Avg_Age
 FROM sd254_users
-GROUP BY state
+GROUP BY city
 INFO  : Query ID = hive_20230821002816_06a5b7b2-9827-47a1-85e5-19c581bdc675
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
 INFO  : Subscribed to counters: [] for queryId: hive_20230821002816_06a5b7b2-9827-47a1-85e5-19c581bdc675
 INFO  : Session is already open
-INFO  : Dag name: SELECT state, AVG(current_age) AS Av...state (Stage-1)
+INFO  : Dag name: SELECT city, AVG(current_age) AS Av...city (Stage-1)
 INFO  : Status: Running (Executing on YARN cluster with App id application_1692561457639_0009)
 
 ----------------------------------------------------------------------------------------------
@@ -1501,7 +1501,7 @@ INFO  : Completed executing command(queryId=hive_20230821002816_06a5b7b2-9827-47
 INFO  : OK
 INFO  : Concurrency mode is disabled, not creating a lock manager
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Abbeville                  | 39.0                |
 | Aberdeen                   | 35.0                |
@@ -1604,7 +1604,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Bessemer                   | 40.0                |
 | Bessemer City              | 43.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Bethesda                   | 54.0                |
 | Bethlehem                  | 54.0                |
@@ -1707,7 +1707,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Central Point              | 45.0                |
 | Challis                    | 41.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Chambersburg               | 64.0                |
 | Chana                      | 22.0                |
@@ -1810,7 +1810,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Delavan                    | 70.0                |
 | Delmar                     | 55.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Delphos                    | 76.0                |
 | Delray Beach               | 62.0                |
@@ -1913,7 +1913,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Fort Worth                 | 41.8                |
 | Foxboro                    | 40.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Franconia                  | 47.0                |
 | Frankfort                  | 80.0                |
@@ -2016,7 +2016,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Highlands                  | 56.0                |
 | Hillsboro                  | 38.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Hinsdale                   | 47.0                |
 | Hitchcock                  | 42.0                |
@@ -2119,7 +2119,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Lake Forest                | 55.0                |
 | Lake George                | 36.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Lake Havasu City           | 43.0                |
 | Lake Hopatcong             | 42.0                |
@@ -2222,7 +2222,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Marshfield                 | 42.0                |
 | Martinsburg                | 42.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Maryland Heights           | 26.0                |
 | Marysville                 | 22.0                |
@@ -2325,7 +2325,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | New Orleans                | 26.333333333333332  |
 | New York                   | 41.888888888888886  |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Newark                     | 35.75               |
 | Newburgh                   | 43.5                |
@@ -2428,7 +2428,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Peckville                  | 54.0                |
 | Pennington                 | 45.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Pensacola                  | 39.666666666666664  |
 | Perkins                    | 56.0                |
@@ -2531,7 +2531,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Rosebush                   | 63.0                |
 | Rosedale                   | 41.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Rosemead                | 21.0                |
 | Roseville               | 37.666666666666664  |
@@ -2634,7 +2634,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Stockton                | 30.0                |
 | Strafford               | 66.0                |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Stratford               | 37.0                |
 | Strongsville            | 66.0                |
@@ -2737,7 +2737,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Warwick                 | 32.0                |
 | Washington              | 51.333333333333336  |
 +----------------------------+---------------------+
-|           state            |       avg_age       |
+|            city            |       avg_age       |
 +----------------------------+---------------------+
 | Washington Court House  | 53.0                |
 | Waterbury               | 53.0                |
@@ -3214,36 +3214,36 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber o número de transações por estado do comerciante:
+Consulta para saber o número de transações por cidade do comerciante:
 
 
 
-SELECT merchant_state, COUNT(*) AS Num_Transactions
+SELECT merchant_city, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state;
+GROUP BY merchant_city;
 
 
-0: jdbc:hive2://localhost:10000/default> SELECT merchant_state, COUNT(*) AS Num_Transactions
+0: jdbc:hive2://localhost:10000/default> SELECT merchant_city, COUNT(*) AS Num_Transactions
 . . . . . . . . . . . . . . . . . . . .> FROM user0_credit_card_transactions
-. . . . . . . . . . . . . . . . . . . .> GROUP BY merchant_state;
-INFO  : Compiling command(queryId=hive_20230821004727_499fb056-2e8d-4ab8-9b24-974d0bdaa688): SELECT merchant_state, COUNT(*) AS Num_Transactions
+. . . . . . . . . . . . . . . . . . . .> GROUP BY merchant_city;
+INFO  : Compiling command(queryId=hive_20230821004727_499fb056-2e8d-4ab8-9b24-974d0bdaa688): SELECT merchant_city, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state
+GROUP BY merchant_city
 INFO  : Concurrency mode is disabled, not creating a lock manager
 INFO  : Semantic Analysis Completed (retrial = false)
-INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:merchant_state, type:string, comment:null), FieldSchema(name:num_transactions, type:bigint, comment:null)], properties:null)
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:merchant_city, type:string, comment:null), FieldSchema(name:num_transactions, type:bigint, comment:null)], properties:null)
 INFO  : Completed compiling command(queryId=hive_20230821004727_499fb056-2e8d-4ab8-9b24-974d0bdaa688); Time taken: 0.099 seconds
 INFO  : Concurrency mode is disabled, not creating a lock manager
-INFO  : Executing command(queryId=hive_20230821004727_499fb056-2e8d-4ab8-9b24-974d0bdaa688): SELECT merchant_state, COUNT(*) AS Num_Transactions
+INFO  : Executing command(queryId=hive_20230821004727_499fb056-2e8d-4ab8-9b24-974d0bdaa688): SELECT merchant_city, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state
+GROUP BY merchant_city
 INFO  : Query ID = hive_20230821004727_499fb056-2e8d-4ab8-9b24-974d0bdaa688
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
 INFO  : Subscribed to counters: [] for queryId: hive_20230821004727_499fb056-2e8d-4ab8-9b24-974d0bdaa688
 INFO  : Session is already open
-INFO  : Dag name: SELECT merchant_state, COUN...merchant_state (Stage-1)
+INFO  : Dag name: SELECT merchant_city, COUN...merchant_city (Stage-1)
 INFO  : Status: Running (Executing on YARN cluster with App id application_1692561457639_0010)
 
 ----------------------------------------------------------------------------------------------
@@ -3258,7 +3258,7 @@ INFO  : Completed executing command(queryId=hive_20230821004727_499fb056-2e8d-4a
 INFO  : OK
 INFO  : Concurrency mode is disabled, not creating a lock manager
 +----------------------+-------------------+
-|    merchant_state    | num_transactions  |
+|    merchant_city     | num_transactions  |
 +----------------------+-------------------+
 | Abrams               | 6                 |
 | Agua Dulce           | 2                 |
@@ -3361,7 +3361,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Hanford              | 2                 |
 | Hawthorne            | 43                |
 +----------------------+-------------------+
-|    merchant_state    | num_transactions  |
+|    merchant_city     | num_transactions  |
 +----------------------+-------------------+
 | Helendale            | 4                 |
 | Hesperia             | 16                |
@@ -3464,7 +3464,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Pine Mountain Club   | 5                 |
 | Pitman               | 1                 |
 +----------------------+-------------------+
-|    merchant_state    | num_transactions  |
+|    merchant_city     | num_transactions  |
 +----------------------+-------------------+
 | Pixley               | 1                 |
 | Playa Vista          | 2                 |
@@ -3641,46 +3641,46 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 +------------+--------------------+
 | age_group  |   avg_num_cards    |
 +------------+--------------------+
-| 18-30      | 710.4134615384615  |
-| 31-45      | 711.6627906976744  |
-| 46-60      | 706.7134831460675  |
-| 60+        | 710.3511627906977  |
+| 18-30      | 2.105769230769231  |
+| 31-45      | 2.8275193798449614 |
+| 46-60      | 3.348314606741573  |
+| 60+        | 4.195348837209302  |
 +------------+--------------------+
 4 rows selected (6.344 seconds)
 0: jdbc:hive2://localhost:10000/default> 
 
 **************************************************************************************************************************************************************************
 
-Consulta para saber o total de transações por estado e por mês:
+Consulta para saber o total de transações por cidade e por mês:
 
 
 
-SELECT merchant_state, month, COUNT(*) AS Num_Transactions
+SELECT merchant_city, month, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state, month;
+GROUP BY merchant_city, month;
 
 
-0: jdbc:hive2://localhost:10000/default> SELECT merchant_state, month, COUNT(*) AS Num_Transactions
+0: jdbc:hive2://localhost:10000/default> SELECT merchant_city, month, COUNT(*) AS Num_Transactions
 . . . . . . . . . . . . . . . . . . . .> FROM user0_credit_card_transactions
-. . . . . . . . . . . . . . . . . . . .> GROUP BY merchant_state, month;
-INFO  : Compiling command(queryId=hive_20230821005157_fcce18b0-ff4d-45c1-a0e5-4aa7e7469644): SELECT merchant_state, month, COUNT(*) AS Num_Transactions
+. . . . . . . . . . . . . . . . . . . .> GROUP BY merchant_city, month;
+INFO  : Compiling command(queryId=hive_20230821005157_fcce18b0-ff4d-45c1-a0e5-4aa7e7469644): SELECT merchant_city, month, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state, month
+GROUP BY merchant_city, month
 INFO  : Concurrency mode is disabled, not creating a lock manager
 INFO  : Semantic Analysis Completed (retrial = false)
-INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:merchant_state, type:string, comment:null), FieldSchema(name:month, type:string, comment:null), FieldSchema(name:num_transactions, type:bigint, comment:null)], properties:null)
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:merchant_city, type:string, comment:null), FieldSchema(name:month, type:string, comment:null), FieldSchema(name:num_transactions, type:bigint, comment:null)], properties:null)
 INFO  : Completed compiling command(queryId=hive_20230821005157_fcce18b0-ff4d-45c1-a0e5-4aa7e7469644); Time taken: 0.088 seconds
 INFO  : Concurrency mode is disabled, not creating a lock manager
-INFO  : Executing command(queryId=hive_20230821005157_fcce18b0-ff4d-45c1-a0e5-4aa7e7469644): SELECT merchant_state, month, COUNT(*) AS Num_Transactions
+INFO  : Executing command(queryId=hive_20230821005157_fcce18b0-ff4d-45c1-a0e5-4aa7e7469644): SELECT merchant_city, month, COUNT(*) AS Num_Transactions
 FROM user0_credit_card_transactions
-GROUP BY merchant_state, month
+GROUP BY merchant_city, month
 INFO  : Query ID = hive_20230821005157_fcce18b0-ff4d-45c1-a0e5-4aa7e7469644
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
 INFO  : Subscribed to counters: [] for queryId: hive_20230821005157_fcce18b0-ff4d-45c1-a0e5-4aa7e7469644
 INFO  : Session is already open
-INFO  : Dag name: SELECT merchant_state, month, COUNT(...month (Stage-1)
+INFO  : Dag name: SELECT merchant_city, month, COUNT(...month (Stage-1)
 INFO  : Status: Running (Executing on YARN cluster with App id application_1692561457639_0010)
 
 ----------------------------------------------------------------------------------------------
@@ -3695,7 +3695,7 @@ INFO  : Completed executing command(queryId=hive_20230821005157_fcce18b0-ff4d-45
 INFO  : OK
 INFO  : Concurrency mode is disabled, not creating a lock manager
 +----------------------+--------+-------------------+
-|    merchant_state    | month  | num_transactions  |
+|    merchant_city     | month  | num_transactions  |
 +----------------------+--------+-------------------+
 | Alhambra             | 1      | 2                 |
 | Anaheim              | 1      | 8                 |
@@ -3798,7 +3798,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Upland               | 10     | 3                 |
 | Walnut               | 10     | 1                 |
 +----------------------+--------+-------------------+
-|    merchant_state    | month  | num_transactions  |
+|    merchant_city     | month  | num_transactions  |
 +----------------------+--------+-------------------+
 | Wellington           | 10     | 3                 |
 | West Covina          | 10     | 2                 |
@@ -3901,7 +3901,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | West Henrietta       | 12     | 2                 |
 | Williamson           | 12     | 3                 |
 +----------------------+--------+-------------------+
-|    merchant_state    | month  | num_transactions  |
+|    merchant_city     | month  | num_transactions  |
 +----------------------+--------+-------------------+
 | Worcester            | 12     | 1                 |
 | Alice                | 2      | 1                 |
@@ -4004,7 +4004,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Williamsburg         | 3      | 1                 |
 | Agua Dulce           | 4      | 2                 |
 +----------------------+--------+-------------------+
-|    merchant_state    | month  | num_transactions  |
+|    merchant_city     | month  | num_transactions  |
 +----------------------+--------+-------------------+
 | Alice                | 4      | 17                |
 | Aransas Pass         | 4      | 2                 |
@@ -4107,7 +4107,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | Monterey Park        | 6      | 223               |
 | ONLINE               | 6      | 97                |
 +----------------------+--------+-------------------+
-|    merchant_state    | month  | num_transactions  |
+|    merchant_city     | month  | num_transactions  |
 +----------------------+--------+-------------------+
 | Oakland              | 6      | 1                 |
 | Ontario              | 6      | 5                 |
@@ -4210,7 +4210,7 @@ INFO  : Concurrency mode is disabled, not creating a lock manager
 | La Verne             | 8      | 948               |
 | Las Vegas            | 8      | 12                |
 +----------------------+--------+-------------------+
-|    merchant_state    | month  | num_transactions  |
+|    merchant_city     | month  | num_transactions  |
 +----------------------+--------+-------------------+
 | Marlton              | 8      | 44                |
 | Mira Loma            | 8      | 207               |
