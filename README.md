@@ -45,7 +45,7 @@ Demonstração de uma dentre várias consultas feitas em SQL
 
 ## Análise de Dados
 
-Os dados usados neste projeto são referentes a transações de cartões de crédito de cidadãos estadunidenses. Nesses CSV é possível encontrar informações sobre taxas de fraude, valores de compra, códigos de categoria de comerciante (MCCs) e outras métricas (o dicionário de dados está disponível no final da página).
+Os dados usados neste projeto são referentes a transações de cartões de crédito de cidadãos estadunidenses. Nesses CSVs é possível encontrar informações sobre taxas de fraude, valores de compra, códigos de categoria de comerciante (MCCs) e outras métricas (o dicionário de dados está disponível no final da página).
 
 A análise de dados teve por objetivo responder as seguintes perguntas:
 - Qual é o número médio de transações por dia da semana?
